@@ -36,7 +36,7 @@
       });
 
 
-    window.setInterval(() => {
+    setInterval(() => {
       console.log("Try updating SW");
 
       if (self.registration.active) {
