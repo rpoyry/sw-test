@@ -30,8 +30,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "roope.poyry@easyopp.fi"
+          git config --local user.name "Roope Pöyry"
           git add .
           git commit -m "Update service worker version"
           git push https://github.com/${{ github.repository }}.git HEAD:main
