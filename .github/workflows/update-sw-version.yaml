@@ -39,6 +39,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Update service worker version"
-          git push https://github.com/${{ github.repository }}.git HEAD:main
-            # Use the GitHub token secret as the password
-            -o password="${{ secrets.SW_TEST_TOKEN }}"
+          git push
