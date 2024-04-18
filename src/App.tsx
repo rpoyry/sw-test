@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Canceling the ssssupdate <code>src/App.tsx</code> and save to reload.
+          Canceling the <code>src/App.tsx</code> and save to reload.
         </p>
         <a
           className="App-link"
@@ -24,3 +24,4 @@ function App() {
 }
 
 export default App;
+ssasds
