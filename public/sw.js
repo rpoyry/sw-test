@@ -1,5 +1,5 @@
 (function (self) {
-    var versionNo = '6'; //VersionNo
+    var versionNo = '5'; //VersionNo
     //Service worker contents...
     // self.addEventListener("install", function (event) {
     //     console.log("[Service Worker] Installing Service Worker...");
@@ -13,42 +13,28 @@
     //         self.skipWaiting();
     //     }
     // });
-    // self.addEventListener('install', function(e) {
-    //     self.skipWaiting();
-    //   });
-      
-    //   self.addEventListener('activate', function(e) {
-    //     e.waitUntil(self.clients.claim());
-
-    //     self.clients.matchAll().then((clients) => {
-    //         clients.forEach((client) => {
-    //           client.postMessage({ type: 'UPDATE_AVAILABLE' });
-    //         });
-    //       });
-
-    //     // self.registration.unregister()
-    //     //   .then(function() {
-    //     //     return self.clients.matchAll();
-    //     //   })
-    //     //   .then(function(clients) {
-    //     //     clients.forEach(client => client.navigate(client.url))
-    //     //   });
-    //   });
-    // // self.addEventListener("fetch", function (event) {
-    // // });
-
     self.addEventListener('install', function(e) {
-      self.skipWaiting();
-    });
-    
-    self.addEventListener('activate', function(e) {
-      self.registration.unregister()
-        .then(function() {
-          return self.clients.matchAll();
-        })
-        .then(function(clients) {
-          clients.forEach(client => client.navigate(client.url))
-        });
-    });
+        self.skipWaiting();
+      });
+      
+      self.addEventListener('activate', function(e) {
+        e.waitUntil(self.clients.claim());
+
+        self.clients.matchAll().then((clients) => {
+            clients.forEach((client) => {
+              client.postMessage({ type: 'UPDATE_AVAILABLE' });
+            });
+          });
+
+        // self.registration.unregister()
+        //   .then(function() {
+        //     return self.clients.matchAll();
+        //   })
+        //   .then(function(clients) {
+        //     clients.forEach(client => client.navigate(client.url))
+        //   });
+      });
+    // self.addEventListener("fetch", function (event) {
+    // });
 })(self);
 //# sourceMappingURL=sw.js.map
