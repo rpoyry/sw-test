@@ -1,5 +1,5 @@
 (function (self) {
-    var versionNo = '5'; //VersionNo
+    var versionNo = '6'; //VersionNo
     //Service worker contents...
     // self.addEventListener("install", function (event) {
     //     console.log("[Service Worker] Installing Service Worker...");
