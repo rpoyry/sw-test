@@ -33,7 +33,7 @@
         //   .then(function(clients) {
         //     clients.forEach(client => client.navigate(client.url))
         //   });
-      });
+      // });
     // self.addEventListener("fetch", function (event) {
     // });
 
