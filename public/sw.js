@@ -1,5 +1,5 @@
 (function (self) {
-    var versionNo = '3'; //VersionNo
+    var versionNo = '4'; //VersionNo
     //Service worker contents...
     // self.addEventListener("install", function (event) {
     //     console.log("[Service Worker] Installing Service Worker...");
@@ -18,7 +18,7 @@
       });
       
       self.addEventListener('activate', function(e) {
-        e.waitUntil(self.clients.claim());
+        // e.waitUntil(self.clients.claim());
 
         self.clients.matchAll().then((clients) => {
             clients.forEach((client) => {
