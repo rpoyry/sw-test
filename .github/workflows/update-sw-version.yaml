@@ -27,9 +27,6 @@ jobs:
         id: get_commit_hash
         run: echo "commit_hash=$(git log --format=%H -1)" >> $GITHUB_OUTPUT
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Update Service Worker Version
         run: node update-sw-version.js ${{ steps.get_commit_hash.outputs.commit_hash }}
 
