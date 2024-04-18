@@ -1,11 +1,10 @@
-// update-sw-version.js
+// generate-sw-version.js
 
 const fs = require('fs');
 
 // Get the commit hash from command line arguments
-// const commitHash = process.argv[2];
-const version = `v2`; // Use the first 8 characters of the commit hash as the version
-
+const commitHash = process.argv[2];
+const version = `${commitHash.substring(0, 8)}`; // Use the first 8 characters of the commit hash as the version
 const swFilePath = './public/sw.js'; // Specify the path to your service worker file
 
 fs.readFile(swFilePath, 'utf8', (err, data) => {

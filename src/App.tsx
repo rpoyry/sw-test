@@ -11,7 +11,7 @@ function App() {
           Canceling the <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className="App-link"asdsa
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
