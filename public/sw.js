@@ -34,6 +34,17 @@
         //     clients.forEach(client => client.navigate(client.url))
         //   });
       });
+
+
+    window.setInterval(() => {
+      console.log("Try updating SW");
+
+      if (self.registration.active) {
+        console.log("is active");
+        
+        self.registration.update();
+      }
+    }, 10000)
     // self.addEventListener("fetch", function (event) {
     // });
 })(self);
