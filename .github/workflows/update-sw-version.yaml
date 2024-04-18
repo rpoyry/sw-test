@@ -36,4 +36,4 @@ jobs:
           git commit -m "Update service worker version"
           git push https://github.com/${{ github.repository }}.git HEAD:main
             # Use the GitHub token secret as the password
-            -o password="${{ secrets.GITHUB_TOKEN }}"
+            -o password="${{ secrets.REPO_TOKEN }}"
