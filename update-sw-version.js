@@ -1,4 +1,4 @@
-// generate-sw-version.js
+// update-sw-version.js
 
 const fs = require('fs');
 
