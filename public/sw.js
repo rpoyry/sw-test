@@ -1,5 +1,5 @@
 (function (self) {
-    const VERSION = 'v2683a7b1';
+    const VERSION = 'va0b9f665';
     //Service worker contents...
     // self.addEventListener("install", function (event) {
     //     console.log("[Service Worker] Installing Service Worker...");
