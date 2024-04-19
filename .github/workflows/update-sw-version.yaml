@@ -1,12 +1,7 @@
 name: Update Service Worker Version
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - public/sw.js
-
+  workflow_dispatch:
 jobs:
   update-sw-version:
     runs-on: ubuntu-latest
