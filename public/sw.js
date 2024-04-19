@@ -1,5 +1,5 @@
 (function (self) {
-  const VERSION = 'VERSION14';
+  const VERSION = 'VERSION15';
    self.addEventListener("install", function (e) {
      self.skipWaiting();
    });

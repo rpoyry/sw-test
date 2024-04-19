@@ -1,18 +1,19 @@
-import { useEffect } from "react";
-// import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 export const ServiceWorkerHandler = () => {
-    // const [pendingUpdate, setPendingUpdate] = useState(false);
+    const [pendingUpdate, setPendingUpdate] = useState(false);
 
-    // // const location = useLocation();
+    const location = useLocation();
 
-    // useEffect(() => {
-    //     if (pendingUpdate) {
-    //         // Force reload
-    //         window.location.reload();
-    //     }
-    // }, [location.pathname]);
+    useEffect(() => {
+        if (pendingUpdate) {
+            // Force reload
+            window.location.reload();
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [location.pathname]);
 
     const onUpdate = (registration: ServiceWorkerRegistration) => {
         console.log("On update");
@@ -28,7 +29,7 @@ export const ServiceWorkerHandler = () => {
             // Refresh the page to activate the new version
             window.location.reload();
         } else {
-            // setPendingUpdate(true);
+            setPendingUpdate(true);
         }
     };
 
