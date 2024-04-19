@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 // import { useLocation } from "react-router-dom";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 export const ServiceWorkerHandler = () => {
-    const [pendingUpdate, setPendingUpdate] = useState(false);
+    // const [pendingUpdate, setPendingUpdate] = useState(false);
 
     // // const location = useLocation();
 
@@ -28,7 +28,7 @@ export const ServiceWorkerHandler = () => {
             // Refresh the page to activate the new version
             window.location.reload();
         } else {
-            setPendingUpdate(true);
+            // setPendingUpdate(true);
         }
     };
 
